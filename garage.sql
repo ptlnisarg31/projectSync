@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 08, 2023 at 04:18 PM
+-- Generation Time: Oct 08, 2023 at 07:10 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -213,6 +213,13 @@ CREATE TABLE `customer_debit_logs` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `customer_debit_logs`
+--
+
+INSERT INTO `customer_debit_logs` (`id`, `customer_id`, `workshop_id`, `sale_id`, `debit_amount`, `credit`, `is_debit`, `comments`, `payment_type`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, NULL, 1, NULL, 0.0000, 0, NULL, NULL, '2023-10-08 17:07:20', '2023-10-08 17:07:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -813,7 +820,7 @@ INSERT INTO `products` (`id`, `product_name`, `company_name`, `model_number`, `h
 (147, 'Rediator(Type II)', '1', '88', 'old', 2200.00, 2500.00, 0.00, 2.00, 2.00, -32.00, NULL, NULL, NULL),
 (148, 'Intercooler (TypeII)', '1', '88', 'old', 1800.00, 2200.00, 0.00, 1.00, 1.00, -5.00, NULL, NULL, NULL),
 (149, 'Gear box c plate (Type I)', '8', '42', 'Imp', 360.00, 360.00, 0.00, 1.00, 1.00, -18.00, NULL, NULL, NULL),
-(150, 'Ceiling light', '8', '41', 'Imp', 550.00, 850.00, 0.00, 1.00, 1.00, -11.00, NULL, NULL, NULL),
+(150, 'Ceiling light', '8', '41', 'Imp', 550.00, 850.00, 0.00, 1.00, 1.00, -11.00, NULL, NULL, '2023-10-08 17:07:20'),
 (151, 'Air cleaner assy', '1', '87', 'imp', 1113.00, 1113.00, 0.00, 2.00, 1.00, -1.00, NULL, NULL, NULL),
 (152, 'Door rubber set (Type V)', '2', '46', 'imp', 2500.00, 2500.00, 0.00, 1.00, 1.00, -15.00, NULL, NULL, NULL),
 (153, 'Door gola bidding set(Type v)', '2', '46', 'imp', 800.00, 800.00, 0.00, 1.00, 1.00, -15.00, NULL, NULL, NULL),
@@ -1779,6 +1786,13 @@ CREATE TABLE `service_names` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `service_names`
+--
+
+INSERT INTO `service_names` (`id`, `service_type_id`, `service_name`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Cleaning', NULL, '2023-10-08 16:28:34', '2023-10-08 16:28:34');
+
 -- --------------------------------------------------------
 
 --
@@ -1817,6 +1831,13 @@ CREATE TABLE `service_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `service_types`
+--
+
+INSERT INTO `service_types` (`id`, `service_type_name`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Washing', NULL, '2023-10-08 16:27:19', '2023-10-08 16:27:19');
 
 -- --------------------------------------------------------
 
@@ -1923,7 +1944,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `password_hint`, `remember_token`, `role_id`, `avatar`, `created_at`, `updated_at`) VALUES
-(1, 'SwiftFix', 'admin@admin.com', NULL, '$2y$10$IDRlMIiXorKrci4p0poPPOxducGKbdLV/gExYtbjb6QtsuytjOXMW', '111111', 'nnmaHg3yWFIKpKaVVOV0pgparkhjeoWmjNLnU86Y9M9N2jpwcnapcg8PHmv9', 1, NULL, '2023-08-29 08:16:09', '2023-08-29 23:27:54');
+(1, 'SwiftFix', 'admin@admin.com', NULL, '$2y$10$IDRlMIiXorKrci4p0poPPOxducGKbdLV/gExYtbjb6QtsuytjOXMW', '111111', 'XlcCRSo1QeYZfzqYlqVGjNccxUn4cjOgFLsNylQIaRyacGI0jzGaYpRGYKJk', 1, NULL, '2023-08-29 08:16:09', '2023-08-29 23:27:54');
 
 -- --------------------------------------------------------
 
@@ -2042,6 +2063,13 @@ CREATE TABLE `workshops` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `workshops`
+--
+
+INSERT INTO `workshops` (`id`, `customer_id`, `is_workshop`, `name`, `reference`, `company`, `gst_no`, `mobile`, `landline`, `email`, `address`, `city`, `state`, `pin`, `vehicle_reg_number`, `model_year`, `company_name`, `model_number`, `brand`, `vin`, `reg_number`, `odometer_reading`, `color`, `fuel_type`, `engine_number`, `key_number`, `due_in`, `due_out`, `status`, `is_complete`, `advisor`, `notes`, `paid_price`, `installmentPayment`, `discount_price`, `balance_price`, `grandTotal`, `serviceGST`, `submited_part`, `others_submited_part`, `workshop_date`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 0, 'Avadh', NULL, NULL, 'GSTIN12645', '9898346578', NULL, 'avadh@gmail.com', NULL, NULL, NULL, NULL, '12', NULL, NULL, '41', '8', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Complete(Spare Purchase)', 1, NULL, NULL, 0.00000, 0.00, 0.00, 0.00, 0.00, 1, NULL, NULL, '2023-10-02 18:30:00', NULL, '2023-10-08 17:07:20', '2023-10-08 17:07:20');
+
 -- --------------------------------------------------------
 
 --
@@ -2060,6 +2088,13 @@ CREATE TABLE `workshop_products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `workshop_products`
+--
+
+INSERT INTO `workshop_products` (`id`, `product_id`, `workshop_id`, `product_quantity`, `product_price`, `workshop_product_model`, `workshop_product_brand`, `is_returned`, `created_at`, `updated_at`) VALUES
+(1, 150, 1, 0, 850.00, 41, 8, 0, '2023-10-08 17:07:20', '2023-10-08 17:07:20');
 
 -- --------------------------------------------------------
 
@@ -2346,7 +2381,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `customer_debit_logs`
 --
 ALTER TABLE `customer_debit_logs`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `documentations`
@@ -2454,7 +2489,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `service_names`
 --
 ALTER TABLE `service_names`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `service_saled_logs`
@@ -2466,7 +2501,7 @@ ALTER TABLE `service_saled_logs`
 -- AUTO_INCREMENT for table `service_types`
 --
 ALTER TABLE `service_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `submiter_part_details`
@@ -2514,13 +2549,13 @@ ALTER TABLE `vehicle_details`
 -- AUTO_INCREMENT for table `workshops`
 --
 ALTER TABLE `workshops`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `workshop_products`
 --
 ALTER TABLE `workshop_products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `workshop_products_estimateds`
