@@ -7,7 +7,7 @@
       </li>
 
       <li class="nav-title">
-        WorldGyan
+        Menu
       </li>
        @php
         $role_id=Auth::user()->role_id;
