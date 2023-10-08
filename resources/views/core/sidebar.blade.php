@@ -74,7 +74,7 @@
         </ul>
       </li>
 
-       <li class="nav-item nav-dropdown">
+       {{-- <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Purchase</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
@@ -89,7 +89,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/purchase/purhase_return')}}"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Purchase Return Log  </a>
           </li>
-        </ul>
+        </ul> --}}
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-cogs fa-spin" aria-hidden="true"></i></i>Service</a>
@@ -123,7 +123,7 @@
           @endif
         </ul>
       </li>
-      <li class="nav-item nav-dropdown">
+      {{-- <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-inr "></i>Credit Debit Log</a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
@@ -135,9 +135,9 @@
             @if($role_id==1)
           <li class="nav-item">
             <a class="nav-link" href="{{asset('/credit-debit/delete')}}"><i class="icon-trash"></i> Delete  </a>
-          </li>
-          @endif
-        </ul>
+          </li> --}}
+          {{-- @endif --}}
+        {{-- </ul> --}}
       </li>
        @endif
        @if($role_id==1)

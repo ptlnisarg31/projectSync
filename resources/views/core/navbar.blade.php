@@ -22,21 +22,21 @@
  --}}
   </ul>
   <ul class="nav navbar-nav ml-auto">
-    <li class="nav-item d-md-down-none">
+    {{-- <li class="nav-item d-md-down-none">
       <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
-    </li>
-    <li class="nav-item d-md-down-none">
+    </li> --}}
+    {{-- <li class="nav-item d-md-down-none">
       <a class="nav-link" href="#"><i class="icon-list"></i></a>
-    </li>
-    <li class="nav-item d-md-down-none">
+    </li> --}}
+    {{-- <li class="nav-item d-md-down-none">
       <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
-    </li>
+    </li> --}}
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         @if (Auth::check())
-          <img src="{{asset(Auth::user()->avatar)}}" class="img-avatar" alt="{{ Auth::user()->email }}">
+        <strong>{{ auth()->user()->name }}</strong>
         @else
-          <img src="{{ asset('img/avatars/6.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
+          <strong>Guest</strong>
         @endif
       </a>
       <div class="dropdown-menu dropdown-menu-right">
@@ -63,8 +63,7 @@
       </div>
     </li>
   </ul>
-  <button class="navbar-toggler aside-menu-toggler" type="button">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler " type="button">
   </button>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
   {{ csrf_field() }}
