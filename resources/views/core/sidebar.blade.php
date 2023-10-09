@@ -17,27 +17,21 @@
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-address-book-o"></i> Workshop</a>
         <ul class="nav-dropdown-items">
            
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/add')}}"><i class="fa fa-user"></i> Add</a>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/search')}}"><i class="fa fa-search"></i> Search  </a>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/delete')}}"><i class="icon-trash"></i> Trash  </a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link" href="{{ asset('/') }}/AutoCare/customer/add "><i class="fa fa-user-plus" aria-hidden="true"></i> Customers</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/sale/add')}}"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Sale Spare</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="{{asset('/AutoCare/sale/sale_return')}}"><i class="fa fa-building" aria-hidden="true"></i></i>Return Spare Log</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href=" {{asset('/CustomerCreditDebitLog/search')}}"><i class="fa fa-inr" aria-hidden="true"></i></i> Customer Log  </a>
-          </li>
+          
         </ul>
       </li>
 
@@ -50,12 +44,12 @@
           <li class="nav-item">
             <a class="nav-link" href=" {{asset('/AutoCare/supplier/search')}}"><i class="fa fa-search"></i> Search  </a>
           </li>
-           <li class="nav-item">
+           {{-- <li class="nav-item">
             <a class="nav-link" href=" {{asset('/SupplierCreditDebitLog/search')}}"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Supplier Log  </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=" {{asset('/AutoCare/supplier/delete')}}"><i class="icon-trash"></i> Trash  </a>
-          </li>
+          </li> --}}
         </ul>
       </li>
 
@@ -68,9 +62,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/product/search')}}"><i class="fa fa-search"></i> Search  </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/product/delete')}}"><i class="icon-trash"></i> Trash  </a>
-          </li>
+          </li> --}}
         </ul>
       </li>
 
