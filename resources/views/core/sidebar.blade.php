@@ -17,12 +17,12 @@
         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-address-book-o"></i> Workshop</a>
         <ul class="nav-dropdown-items">
            
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/add')}}"><i class="fa fa-user"></i> Add</a>
-          </li> --}}
-          {{-- <li class="nav-item">
+          </li> 
+          <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/search')}}"><i class="fa fa-search"></i> Search  </a>
-          </li> --}}
+          </li> 
           {{-- <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/workshop/delete')}}"><i class="icon-trash"></i> Trash  </a>
           </li> --}}
@@ -94,9 +94,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/service/search')}}"><i class="fa fa-search"></i> Search  </a>
           </li>
-          <li class="nav-item">
+        {{--  <li class="nav-item">
             <a class="nav-link" href="{{asset('/AutoCare/service/delete')}}"><i class="icon-trash"></i> Trash  </a>
           </li>
+          --}}
         </ul>
       </li>
        @endif
@@ -148,7 +149,7 @@
             <a class="nav-link" href="{{asset('/master/service_name')}}"><i class="icon-trash"></i> Service Name  </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{asset('/master/service_type')}}"><i class="icon-trash"></i> Serice Type  </a>
+            <a class="nav-link" href="{{asset('/master/service_type')}}"><i class="icon-trash"></i> Service Type  </a>
           </li>
         </ul>
       </li>

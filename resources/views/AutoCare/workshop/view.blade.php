@@ -64,7 +64,7 @@ border-radius: 15px 50px;
 			</div>
 			<div  class="grid-item " align="right">
 				
-				<div style="width:100%;text-shadow: 3px 2px red;" class="logo"><b><i> [Company Name Like Worldgyan]</i></b>
+				<div style="width:100%;text-shadow: 3px 2px red;" class="logo"><b><i> SwiftFix</i></b>
 				</div>
 				
 			</div>

@@ -57,7 +57,7 @@
               <i class="icon-location-pin"></i>
             </button>
             <h4 class="mb-0">{{ $totalPendingJob }}</h4>
-            <p>Suppliers</p>
+            <p>Total Pending jobs</p>
           </div>
           <div class="chart-wrapper px-3" style="height:70px;">
             <canvas id="card-chart2" class="chart" height="70"></canvas>

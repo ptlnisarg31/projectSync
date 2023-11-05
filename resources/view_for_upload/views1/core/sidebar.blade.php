@@ -116,7 +116,7 @@
             <a class="nav-link" href="{{asset('/master/service_name')}}"><i class="icon-trash"></i> Service Name  </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{asset('/master/service_type')}}"><i class="icon-trash"></i> Serice Type  </a>
+            <a class="nav-link" href="{{asset('/master/service_type')}}"><i class="icon-trash"></i> Service Type  </a>
           </li>
         </ul>
       </li>
